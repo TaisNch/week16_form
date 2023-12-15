@@ -1,0 +1,10 @@
+#myForm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 20px;
+}
+
+.error {
+   border: solid red 1px;
+  }

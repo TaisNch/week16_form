@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <head>
+      Анкета
+    </head>
+    <main>
+      <form id="myForm" name="myForm" novalidate>
+        <div>
+          <input
+            class="input_form"
+            type="text"
+            id="name"
+            name="name"
+            minlength="2"
+            maxlength="20"
+            placeholder="Имя пользоватея"
+            required />
+          <span id="userNameError"></span>
+        </div>
+        <div>
+          <input
+            class="input_form"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Адрес электронной почты"
+            required />
+          * <span id="emailError"></span>
+          <div>
+            <input
+              class="input_form"
+              type="number"
+              name="age"
+              id="age"
+              placeholder="Ваш возраст" />*
+            <span id="ageError"></span>
+          </div>
+        </div>
+        <div>
+          Ваш пол <input class="input_form" type="radio" name="sex" id="sex1" />
+          <label for="male"> М </label>
+          <input type="radio" name="sex" id="sex2" />
+          <label for="female"> Ж </label>
+          <span id="sexError"></span>
+        </div>
+        <div>
+          Ваша профессия
+          <select
+            class="input_form"
+            name="profession"
+            id="profession"
+            placeholder="Выберите профессию"
+            required>
+            <option value="doctor">Врач</option>
+            <option value="it">Программист</option>
+            <option value="teacher">Учитель</option>
+            <option value="designer">Дизайнер</option>
+            <option value="ingeneer">Инженер</option>
+            <option value="sales">Продавец</option>
+            <option value="other">Другое</option>
+          </select>
+          <span id="professionError"></span>
+        </div>
+        <div>
+          <input class="input_form" type="password" name="password"
+          id="password" minlength="8" pattern="
+          pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g""
+          placeholder="Придумайте пароль (от 8 знаков)" />
+          <span id="passwordError"></span>
+        </div>
+
+        <div>
+          <input
+            class="input_form"
+            type="checkbox"
+            id="checkbox"
+            name="checkbox"
+            required />
+          <label for="checkbox">
+            Я согласен с обработкой персональных данных</label
+          >
+          <span id="chekboxError"></span>
+        </div>
+        <button
+          type="submit"
+          name="submitBtn"
+          id="submitBtn"
+          class="submitBtn"
+          disabled>
+          Отправить форму
+        </button>
+      </form>
+    </main>
+    <script src="js.js"></script>
+  </body>
+</html>
